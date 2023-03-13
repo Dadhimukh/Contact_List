@@ -1,7 +1,9 @@
+import Contact_List from "../src/components/Contact_List"
 function App() {
   return (
-    <div className="App">Welcome to Create Contact App
-    </div>
+    <>
+      <Contact_List />
+    </>
   );
 }
 
