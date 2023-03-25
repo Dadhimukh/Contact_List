@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-2">
       <div className="container-fluid">
         <Link to="/" className="navbar-brand ml-5">
-          Contact List App
+          Contact List
         </Link>
       </div>
     </nav>
