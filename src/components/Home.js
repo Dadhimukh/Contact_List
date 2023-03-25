@@ -7,9 +7,9 @@ const Home = () => {
 
   const dispatch = useDispatch();
 
-  // const deleteContact = (id) => {
-  //   dispatch({ type: "DELETE_CONTACT", payload: id });
-  // };
+  const deleteContact = (id) => {
+    dispatch({ type: "DELETE_CONTACT", payload: id });
+  };
 
   return (
     <div className="container">
@@ -46,7 +46,7 @@ const Home = () => {
                     </Link>
                     <button
                       type="button"
-                      // onClick={() => deleteContact(contact.id)}
+                      onClick={() => deleteContact(contact.id)}
                       className="btn btn-small btn-danger"
                     >
                       Delete
