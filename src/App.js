@@ -1,4 +1,3 @@
-import Contact_List from "../src/components/Contact_List"
 function App() {
   return (
     <>
