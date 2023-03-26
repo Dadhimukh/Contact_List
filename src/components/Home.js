@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import "./home.css"
 
 const Home = () => {
   const contacts = useSelector((state) => state);
@@ -17,15 +18,15 @@ const Home = () => {
     <div className="container">
       <div className="row">
         <div className="col-md-12 my-5 text-end">
-          <Link to="/add" className="btn btn-outline-light fw-bold bg-danger">
+          <Link to="/add" className="btn btn-outline-light fw-bold bg-success">
             Add Contact
           </Link>
         </div>
         <div className="col-md-10 mx-auto">
           <table className="table table-hover">
-            <thead className="text-white bg-dark text-center">
+            <thead className="text-white bg-secondary text-center">
               <tr>
-                <th scope="col">#</th>
+                <th scope="col">Sr.no</th>
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Number</th>
@@ -35,11 +36,11 @@ const Home = () => {
             <tbody>
               {contacts.map((contact, id) => (
                 <tr key={id}>
-                  <td>{id + 1}</td>
-                  <td>{contact.name}</td>
-                  <td>{contact.email}</td>
-                  <td>{contact.number}</td>
-                  <td>
+                  <td className="column">{id + 1}</td>
+                  <td className="column">{contact.name}</td>
+                  <td className="column">{contact.email}</td>
+                  <td className="column">{contact.number}</td>
+                  <td className="column">
                     <Link
                       to={`/edit/${contact.id}`}
                       className="btn btn-small btn-primary me-2"
