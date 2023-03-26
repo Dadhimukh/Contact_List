@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { useDispatch } from "react-redux";
-
+import { ToastContainer } from "react-toastify";
 
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -32,6 +32,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <ToastContainer />
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
