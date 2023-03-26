@@ -36,18 +36,21 @@ const Home = () => {
                   <td className="column">{contact.email}</td>
                   <td className="column">{contact.number}</td>
                   <td className="column">
-                    <Link
-                      to={`/edit/${contact.id}`}
-                      className="btn btn-small"
-                    >
-                      <img src="https://cdn-icons-png.flaticon.com/32/143/143437.png" />
+                    <Link to={`/edit/${contact.id}`} className="btn btn-small">
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/32/143/143437.png"
+                        alt="Edit Contact"
+                      />
                     </Link>
                     <button
                       type="button"
                       onClick={() => deleteContact(contact.id)}
                       className="btn btn-small"
                     >
-                      <img src="https://cdn-icons-png.flaticon.com/32/6861/6861362.png" />
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/32/6861/6861362.png"
+                        alt="Delete Contact"
+                      />
                     </button>
                   </td>
                 </tr>
