@@ -17,6 +17,25 @@ const AddContact = () => {
   const handelSubmit = (e) => {
     e.preventDefault();
 
+    const checkEmail = contacts.find(
+      (contact) => contact.email === email && email
+    );
+    const checkNumber = contacts.find(
+      (contact) => contact.number === parseInt(number) && number
+    );
+
+    if (!email || !number || !name) {
+      return toast.warning("Please fill in all fields!");
+    }
+
+    if (checkEmail) {
+      return toast.error("This email already Exists!");
+    }
+
+    if (checkNumber) {
+      return toast.error("This number already Exists!");
+    }
+
     const data = {
       id: contacts[contacts.length - 1].id + 1,
       name,
@@ -24,6 +43,7 @@ const AddContact = () => {
       number,
     };
     dispatch({ type: "ADD_CONTACT", payload: data });
+    toast.success("Contact added successfully!!");
     navigate("/");
   };
 
