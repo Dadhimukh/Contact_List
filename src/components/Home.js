@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import "./home.css"
+import "./home.css";
 
 const Home = () => {
   const contacts = useSelector((state) => state);
@@ -15,14 +15,9 @@ const Home = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="row">
-        <div className="col-md-12 my-5 text-end">
-          <Link to="/add" className="btn btn-outline-light fw-bold bg-success">
-            Add Contact
-          </Link>
-        </div>
-        <div className="col-md-10 mx-auto">
+        <div className="col-md-12 my-5 mx-auto">
           <table className="table table-hover">
             <thead className="text-white bg-secondary text-center">
               <tr>
