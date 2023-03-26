@@ -35,7 +35,7 @@ const App = () => {
       <ToastContainer />
       <Navbar />
       <Routes>
-        <Route exact path="/Contact_List" element={<Home />}></Route>
+        <Route path="/Contact_List" element={<Home />}></Route>
         <Route path="/add" element={<AddContact />}></Route>
         <Route path="/edit/:id" element={<EditContact />}></Route>
       </Routes>
