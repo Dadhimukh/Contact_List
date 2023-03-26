@@ -14,6 +14,7 @@ const Home = () => {
     toast.success("Contact deleted successfully!");
   };
 
+  
   return (
     <div className="container-fluid">
       <div className="row">
