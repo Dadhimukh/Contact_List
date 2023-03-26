@@ -38,15 +38,15 @@ const EditContact = () => {
     );
 
     if (!email || !number || !name) {
-      return toast.warning("Please fill in all fields!");
+      return toast.warning("Please fill all fields!");
     }
 
     if (checkEmail) {
-      return toast.error("This email already Exists!");
+      return toast.error("This email already Exist!");
     }
 
     if (checkNumber) {
-      return toast.error("This number already Exists!");
+      return toast.error("This number already Exist!");
     }
 
     const data = {
@@ -57,7 +57,7 @@ const EditContact = () => {
     };
 
     dispatch({ type: "UPDATE_CONTACT", payload: data });
-    toast.success("Contact updated successfully!!");
+    toast.success("Contact updated successfully!");
     navigate("/");
   };
 
