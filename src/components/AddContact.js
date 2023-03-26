@@ -1,17 +1,31 @@
 import React from "react";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const AddContact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
 
+  const contacts = useSelector((state) => state);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const handelSubmit = (e) => {
     e.preventDefault();
+
+    const data = {
+      id: contacts[contacts.length - 1].id + 1,
+      name,
+      email,
+      number,
+    };
+    dispatch({ type: "ADD_CONTACT", payload: data });
+    navigate("/");
   };
 
-
-  
   return (
     <div className="container">
       <h1 className="display-3 text-center fw-bold">Add Contact</h1>
