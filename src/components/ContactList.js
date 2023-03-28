@@ -37,9 +37,7 @@
          <Navbar />
 
          <Routes>
-            <Route exact path="/contact_list">
-               <Route index element={<Home />} />
-            </Route>
+             <Route  element={<Home />} />
             <Route path="/add" element={<AddContact />}></Route>
             <Route path="/edit/:id" element={<EditContact />}></Route>{" "}
          </Routes>
