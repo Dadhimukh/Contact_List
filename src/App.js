@@ -38,10 +38,10 @@ const App = () => {
 
         <Routes>
           <Route path="/">
-            <Route index element={<Home />} />{" "}
-            <Route path="/add" element={<AddContact />}></Route>
-            <Route path="/edit/:id" element={<EditContact />}></Route>{" "}
+            <Route index element={<Home />} />
           </Route>
+          <Route path="/add" element={<AddContact />}></Route>
+          <Route path="/edit/:id" element={<EditContact />}></Route>{" "}
         </Routes>
       </BrowserRouter>
     </div>
