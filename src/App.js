@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { ToastContainer } from "react-toastify";
 
@@ -32,13 +32,18 @@ const App = () => {
 
   return (
     <div className="App">
-      <ToastContainer />
-      <Navbar />
-      <Routes>
-        <Route path="/Contact_List/Contact_List" element={<Home />}></Route>
-        <Route path="/add" element={<AddContact />}></Route>
-        <Route path="/edit/:id" element={<EditContact />}></Route>
-      </Routes>
+      <BrowserRouter>
+        <ToastContainer />
+        <Navbar />
+
+        <Routes>
+          <Route path="/">
+            <Route index element={<Home />} />{" "}
+            <Route path="/add" element={<AddContact />}></Route>
+            <Route path="/edit/:id" element={<EditContact />}></Route>{" "}
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
