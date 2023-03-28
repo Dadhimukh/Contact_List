@@ -37,7 +37,7 @@ const App = () => {
         <Navbar />
 
         <Routes>
-          <Route path="/">
+          <Route path="/Contact_List">
             <Route index element={<Home />} />
           </Route>
           <Route path="/add" element={<AddContact />}></Route>
