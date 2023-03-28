@@ -37,7 +37,7 @@ const App = () => {
         <Navbar />
 
         <Routes>
-          <Route path="/dadhimukh.github.io/Contact_List/">
+          <Route path="/">
             <Route index element={<Home />} />
           </Route>
           <Route path="/add" element={<AddContact />}></Route>
