@@ -14,17 +14,20 @@ const Home = () => {
     toast.success("Contact deleted successfully!");
   };
 
-  
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-md-12 my-5 mx-auto">
+        <div className="col-md-12 my-5">
           <table className="table table-hover">
-            <thead className="text-white bg-secondary text-center">
+            <thead className="text-white bg-secondary text-start">
               <tr>
-                <th scope="col">Sr.no</th>
+                <th scope="col" className="remove">
+                  Sr.no
+                </th>
                 <th scope="col">Name</th>
-                <th scope="col">Email</th>
+                <th scope="col" className="remove">
+                  Email
+                </th>
                 <th scope="col">Number</th>
                 <th scope="col">Action</th>
               </tr>
@@ -32,9 +35,9 @@ const Home = () => {
             <tbody>
               {contacts.map((contact, id) => (
                 <tr key={id}>
-                  <td className="column">{id + 1}</td>
+                  <td className="column remove">{id + 1}</td>
                   <td className="column">{contact.name}</td>
-                  <td className="column">{contact.email}</td>
+                  <td className="column remove">{contact.email}</td>
                   <td className="column">{contact.number}</td>
                   <td className="column">
                     <Link to={`/edit/${contact.id}`} className="btn btn-small">

@@ -3,3 +3,37 @@
    padding: 0;
    background-color: rgba(208, 233, 233, 0.89) !important;
    }
+
+   @media only screen and (max-width: 600px) {
+   .col-md-12.my-5 {
+      padding: 10px !important;
+   }
+
+   tr > th.remove {
+      display: none;
+   }
+   tr > td.remove {
+      display: none;
+   }
+   }
+
+   @media only screen and (max-width: 370px) {
+   .col-md-12.my-5 {
+      padding: 0 !important;
+   }
+   tr > th {
+      padding: 10px !important;
+   }
+
+   tr > th.remove {
+      display: none;
+   }
+
+   tr > td {
+      padding: 10px !important;
+   }
+
+   tr > td.remove {
+      display: none;
+   }
+   }
