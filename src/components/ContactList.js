@@ -31,18 +31,17 @@
    }, []);
 
    return (
-     <div className="App">
-       <BrowserRouter basename="Contact_List">
+      <div className="App">
          <ToastContainer />
          <Navbar />
-
+         <BrowserRouter basename="Contact_List">
          <Routes>
-           <Route path="/Contact_List" element={<Home />} />
-           <Route path="/add" element={<AddContact />}></Route>
-           <Route path="/edit/:id" element={<EditContact />}></Route>{" "}
+            <Route path="/Contact_List" element={<Home />} />
+            <Route path="/add" element={<AddContact />}></Route>
+            <Route path="/edit/:id" element={<EditContact />}></Route>{" "}
          </Routes>
-       </BrowserRouter>
-     </div>
+         </BrowserRouter>
+      </div>
    );
    };
 
