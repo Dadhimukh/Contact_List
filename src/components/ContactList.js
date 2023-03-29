@@ -34,7 +34,7 @@
       <div className="App">
          <ToastContainer />
          <Navbar />
-         <BrowserRouter>
+         <BrowserRouter basename="Contact_List">
          <Routes>
             <Route path="/Contact_List" element={<Home />} />
             <Route path="/add" element={<AddContact />}></Route>
