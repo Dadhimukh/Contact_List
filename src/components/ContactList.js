@@ -32,14 +32,10 @@
 
    return (
       <div className="App">
-         <BrowserRouter>
+         <BrowserRouter basename="Contact_List">
          <ToastContainer />
          <Navbar />
-<<<<<<< HEAD
-         <BrowserRouter basename="Contact_List">
-=======
 
->>>>>>> 346a312ba5d584479ddf76b1f26f74f4edbe416e
          <Routes>
             <Route path="/Contact_List" element={<Home />} />
             <Route path="/add" element={<AddContact />}></Route>
