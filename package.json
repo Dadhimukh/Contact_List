@@ -2,11 +2,7 @@
   "name": "contact_list",
   "homepage": "https://dadhimukh.github.io/Contact_List/",
   "version": "0.1.0",
-<<<<<<< HEAD
   "private": "false",
-=======
-  "private": true,
->>>>>>> 346a312ba5d584479ddf76b1f26f74f4edbe416e
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
