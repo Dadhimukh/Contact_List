@@ -36,7 +36,7 @@
          <Navbar />
          <BrowserRouter>
          <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/Contact_List" element={<Home />} />
             <Route path="/add" element={<AddContact />}></Route>
             <Route path="/edit/:id" element={<EditContact />}></Route>{" "}
          </Routes>
